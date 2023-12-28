@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Photo Editor/dist/output.css">
+</head>
+<body class="font-sans bg-gray-700 flex justify-center ">
+    <div id="container" class="bg-gray-800 w-4/5 p-5 rounded-lg grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3">
+        <div id="img-container" class="flex flex-col gap-14 justify-center items-center xs:col-span-1 sm:grid-cols-1 md:col-span-1 lg:col-span-2">
+            <div id="img-box">
+                <img id="img" class="xs:max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+            </div>
+            <div id="upload-form">
+                <label for="upload" class="text-white font-bold text-lg px-5 py-2  border-dashed border-2 border-emerald-600 cursor-pointer">Upload</label>
+                <input type="file" id="upload" class="hidden">
+            </div>
+        </div>
+        <div id="filters" class="p-5 text-white text-lg font-semibold max-xs:mt-6 sm:mt-6 md:mt-6 lg:mt-0">
+            <ul class="flex flex-col gap-6">
+                <li>
+                    <label for="saturate">Saturate</label>
+                    <input type="range" id="saturate" min="0" max="200" value="100" class="w-full accent-emerald-500">    
+                </li>
+                <li>
+                    <label for="contrast">Contrast</label>
+                    <input type="range" id="contrast" min="0" max="200" value="100" class="w-full accent-emerald-500">    
+                </li>
+                <li>
+                    <label for="brightness">Brightness</label>
+                    <input type="range" id="brightness" min="0" max="200" value="100" class="w-full accent-emerald-500">    
+                </li>
+                <li>
+                    <label for="sepia">Sepia</label>
+                    <input type="range" id="sepia" min="0" max="200" value="0" class="w-full accent-emerald-500">    
+                </li>
+                <li>
+                    <label for="grayscale">Grayscale</label>
+                    <input type="range" id="grayscale" step="0.1" min="0" max="1" value="0" class="w-full accent-emerald-500">    
+                </li>
+                <li>
+                    <label for="blur">Blur</label>
+                    <input type="range" id="blur" step="0.1" min="0" max="10" value="0" class="w-full accent-emerald-500">    
+                </li>
+                <li>
+                    <label for="hue-rotate">Hue Rotate</label>
+                    <input type="range" id="hue-rotate" min="0" max="350" value="0" class="w-full accent-emerald-500">    
+                </li>
+                <li class="flex flex-row-reverse justify-around  max-xs:flex-col-reverse max-xs:gap-6 sm:flex-row-reverse md:flex-row-reverse lg:flex-row-reverse">
+                    <a download="Photo" id="download" class="px-6 py-3 text-center bg-emerald-700 rounded-lg cursor-pointer">Download</a>
+                    <span onclick="resetValue()" class="px-6 py-3 bg-emerald-700 text-center rounded-lg cursor-pointer" id="reset">Reset</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <script src="/Photo Editor/main.js"></script>
+</body>
+</html>
